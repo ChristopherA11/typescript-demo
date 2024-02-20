@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       {/* remove the messageCount and pass greet in optional or destructrting */}
-      <Greet name="to All" messageCount={10} isLoggedIn={false} />   
+      <Greet name="to All" messageCount={10} isLoggedIn={true} />   
       <Person name={personName} />
       <PersonList names={nameList} />
       <Status status="error" />
