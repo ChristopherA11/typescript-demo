@@ -5,13 +5,18 @@ import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
+import { Button } from './components/event/Button';
+import { Input } from './components/event/Input';
+import { User } from './components/state/User';
 
 function App() {
+  //person use in Person.tsx
   const personName = {
     first: "Bruce",
     last: "Wayne",
   }
 
+  //personlist use in PersonList.tsx
   const nameList = [
     {
       first: "Bruce",
@@ -40,7 +45,9 @@ function App() {
           oscar
         </Heading>
       </Oscar>
-
+      <Button handleClick={(event, id)=> {console.log("buttonClicked",event, id)}} />
+      <Input value="" handleChange={(event) => {console.log(event)}} />
+      <User />
     </div>
   );
 }
