@@ -5,9 +5,15 @@ import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
+import { Private } from './components/componentProps/Private';
+import { Public } from './components/componentProps/Public';
 import { Button } from './components/event/Button';
 import { Input } from './components/event/Input';
+import { Counter } from './components/reducer/Counter';
+import { RefCom } from './components/ref/RefCom';
+import { RandomNumber } from './components/restrict/RandomNumber';
 import { User } from './components/state/User';
+import { ToastPosition } from './components/template/ToastPosition';
 
 function App() {
   //person use in Person.tsx
@@ -40,14 +46,26 @@ function App() {
       <Status status="error" />
       <Heading>Placeholder</Heading>
       {/* parent to children props pass */}
-      <Oscar>
+      <Oscar> 
         <Heading>
           oscar
         </Heading>
       </Oscar>
-      <Button handleClick={(event, id)=> {console.log("buttonClicked",event, id)}} />
+      {/* <Button handleClick={(event, id)=> {console.log("buttonClicked",event, id)}} /> */}
+      <Button />
       <Input value="" handleChange={(event) => {console.log(event)}} />
       <User />
+{/* Reducer */}
+      <Counter />
+      {/* ref */}
+      <RefCom />
+{/* component type pass props */}
+      <Private isLoggedIn={true} component={Public}/>
+
+      {/* restrict */}
+      <RandomNumber value={10} isNegative />
+
+      <ToastPosition position="center"/>
     </div>
   );
 }

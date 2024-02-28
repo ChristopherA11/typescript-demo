@@ -1,4 +1,3 @@
-
 type HeadingProps = {
     children: string
 }

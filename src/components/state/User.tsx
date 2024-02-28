@@ -6,7 +6,7 @@ type AuthUser = {
 }
 
 export const User = () => {  
-    const [user, setUser] = useState<AuthUser | null>(null) 
+    const [user, setUser] = useState<AuthUser | null>(null)    // <AuthUser> ({} as AuthUser) (null as AuthUser | null
     const handleLogIn = () => {
         setUser({name: "John", email: "abc@gmail"
         })
