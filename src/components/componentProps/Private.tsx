@@ -1,5 +1,6 @@
 import { LogIn } from "./LogIn"
 import { PublicProps } from "./Public";
+// import { PublicProps } from "./Public";
 
 type PrivateProps = {
     isLoggedIn: boolean;

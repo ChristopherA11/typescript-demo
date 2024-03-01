@@ -1,6 +1,8 @@
 import './App.css';
 import { Greet } from './components/Greet';
 import { Heading } from './components/Heading';
+import TextBoxComponent from './components/InputCh';
+import Intro from './components/Intro';
 import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
@@ -66,6 +68,8 @@ function App() {
       <RandomNumber value={10} isNegative />
 
       <ToastPosition position="center"/>
+      <Intro />
+      <TextBoxComponent />
     </div>
   );
 }
